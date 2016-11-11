@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Docente extends Model
 {
-    //associate de user with Docente
+    //associate the user with Docente
     public function user(){
         return $this->hasOne('App\User');
     }
