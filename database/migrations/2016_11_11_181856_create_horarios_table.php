@@ -18,12 +18,9 @@ class CreateHorariosTable extends Migration
             $table->date('fecha');
             $table->time('hora_inicio');
             $table->time('hora_fin');
-            $table->integer('docente_id')->unsigned();
-            $table->foreign('docente_id')->references('id')->on('docentes');
-            $table->smallInteger('materia_id')->unsigned();
-            $table->foreign('materia_id')->references('id')->on('materias');
-            $table->smallInteger('grupo_id')->unsigned();
-            $table->foreign('grupo_id')->references('id')->on('grupos');
+            $table->integer('docente_id');
+            $table->smallInteger('materia_id');
+            $table->smallInteger('grupo_id');
         });
     }
 

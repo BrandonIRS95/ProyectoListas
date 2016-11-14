@@ -17,8 +17,7 @@ class CreateListasTable extends Migration
             $table->increments('id');
             $table->date('fecha_inicio');
             $table->date('fecha_fin');
-            $table->integer('horario_id')->unsigned();
-            $table->foreign('horario_id')->references('id')->on('horarios');
+            $table->integer('horario_id');
         });
     }
 

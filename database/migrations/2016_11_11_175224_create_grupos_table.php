@@ -14,12 +14,11 @@ class CreateGruposTable extends Migration
     public function up()
     {
         Schema::create('grupos', function (Blueprint $table) {
-            $table->unsignedSmallInteger('id', true);
+            $table->increments('id');
             $table->char('turno', 1);
             $table->tinyInteger('cuatrimestre');
             $table->char('grupo', 1);
-            $table->integer('periodo_id')->unsigned();
-            $table->foreign('periodo_id')->references('id')->on('periodos');
+            $table->integer('periodo_id');
         });
     }
 
